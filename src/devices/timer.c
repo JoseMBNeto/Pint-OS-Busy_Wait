@@ -87,13 +87,22 @@ timer_elapsed (int64_t then)
 /* Sleeps for approximately TICKS timer ticks.  Interrupts must
    be turned on. */
 void
-timer_sleep (int64_t ticks) 
+timer_sleep (int64_t ticks)
 {
-  int64_t start = timer_ticks ();
-
-  ASSERT (intr_get_level () == INTR_ON);
-  while (timer_elapsed (start) < ticks) 
-    thread_yield ();
+  if (ticks <= 0) return;
+  enum intr_level old_level = intr_disable ();
+  struct thread *t = thread_current ();
+  t->wakeup_tick = timer_ticks () + ticks;
+  struct list_elem *e;
+  for (e = list_begin (&sleeping_list); e != list_end (&sleeping_list); e = list_next (e))
+    {
+      struct thread *cur = list_entry (e, struct thread, sleep_elem);
+      if (cur->wakeup_tick > t->wakeup_tick)
+        break;
+    }
+  list_insert (e, &t->sleep_elem);
+  thread_block ();
+  intr_set_level (old_level);
 }
 
 /* Sleeps for approximately MS milliseconds.  Interrupts must be
