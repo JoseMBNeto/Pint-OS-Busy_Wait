@@ -93,3 +93,31 @@ Powering off...
 [?2004lexit
 
 Script done on 2026-09-21 16:24:12-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-21 16:40:23-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="10"]
+Mon Sep 21 16:40:23 -03 2026
+miltonlnx
+/home/miltonlnx/InfrSW/pintos
+[?2004h]0;miltonlnx@Miltoneto: ~/InfrSW/pintos[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/InfrSW/pintos[00m$ exitpintos -- -q run alarm-multiplemake[Kpintos -- -q run alarm-multiple
+[?2004lCannot find kernel
+[?2004h]0;miltonlnx@Miltoneto: ~/InfrSW/pintos[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/InfrSW/pintos[00m$ pintos -- -q run alarm-multipleexit[Kpintos -- -q run alarm-multiplemake[Kgit pushcommit -m "Criação do log de evidências e primeira modificação do timer_sleep"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd ../devices/timer.c [K[2@../evidencias.log[Cstatus[Kscript -a $PINTOS/evidencias.log -c "date; whoami; pwd; bash"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[39Pcd $PINTOS/src/threadsmake[Kcd $PINTOS/src/threadsscript -a $PINTOS/evidencias.log -c "date; whoami; pwd; bash"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status[Kadd ../../evidencias.log [2Pdevices/timer.c[Ccommit -m "Criação do log de evidências e primeira modificação do timer_sleep"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K[4Pmake[7mcd $PINTOS/src/threads/build[27m[1Pcd $PINTOS/src/threads/buil[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mcd $PINTOS/src/threads/build[27mcd $PINTOS/src/threads/build
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/InfrSW/pintos/src/threads/build[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/InfrSW/pintos/src/threads/build[00m$ cd $PINTOS/src/threads/buildpintos -- -q run alarm-multiple
+[?2004lqemu-system-i386 -device isa-debug-exit -drive format=raw,media=disk,index=0,file=/tmp/H4oSFURXyJ.dsk -m 4 -net none -serial stdio
+Pintos hda1
+Loading...........
+Kernel command line: -q run alarm-multiple
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  19,635,200 loops/s.
+Boot complete.
+Executing 'alarm-multiple':
+(alarm-multiple) begin
+(alarm-multiple) Creating 5 threads to sleep 7 times each.
+(alarm-multiple) Thread 0 sleeps 10 ticks each time,
+(alarm-multiple) thread 1 sleeps 20 ticks each time, and so on.
+(alarm-multiple) If successful, product of iteration count and
+(alarm-multiple) sleep duration will appear in nondescending order.
+[?2004h]0;miltonlnx@Miltoneto: ~/InfrSW/pintos/src/threads/build[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/InfrSW/pintos/src/threads/build[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-21 16:41:04-03:00 [COMMAND_EXIT_CODE="0"]
